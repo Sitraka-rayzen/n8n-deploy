@@ -1,8 +1,1 @@
-FROM n8nio/n8n:latest
 
-# (Optionnel) Copie d'un fichier .env si tu en as un
-# COPY .env /home/node/.env
-
-EXPOSE 5678
-
-CMD ["n8n", "start"]
