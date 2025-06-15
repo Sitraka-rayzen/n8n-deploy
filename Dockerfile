@@ -1,9 +1,10 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:latest
 
-# Copie le fichier .env si besoin
-# COPY .env /home/node/.env
+# Copier le fichier .env si nécessaire
+COPY .env /home/node/.env
 
 EXPOSE 5678
 
-CMD ["n8n", "start"]
+ENV GENERIC_TIMEZONE="Europe/Paris"
 
+CMD ["n8n", "start"]
